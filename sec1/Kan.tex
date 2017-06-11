@@ -1,0 +1,68 @@
+
+Kan extension is an essential notion in category theory, especially in categorical homotopy theory. In this subsection, we will give a short review of Kan extension and some of its applications. We refer reader to \cite{Rieh2014} and \citep{Quil1967} for more details on Kan extensions and model category.
+\par
+\begin{mydefn}
+Suppose $F: \mathcal{C} \rightarrow \mathcal{D}$ be a given functor. Let $K: \mathcal{C} \rightarrow \mathcal{E}$ be another functor. The \textbf{left Kan extension} of $K$ along with $F$ is a functor $\Lan_{F}K$ such that $\eta : K \Rightarrow \Lan_{F}K \circ F$ is universal i.e. if $\gamma: K \Rightarrow G \circ F$ is a natural transformation, then there exists an unique natural transformation $\delta: \Lan_{F}K \Rightarrow G$ such that $\gamma = (\delta F)\circ \eta$.
+In diagram viewpoint, a Kan extension means
+\begin{align*}
+    \xymatrix{
+    \mathcal{C} \ar[rr]^{K}\ar[rd]_{F}&\ar@{=>}[d]_{\gamma}  & \mathcal{E}&\\
+    & \mathcal{D} \ar[ru]_{G}& &\\
+    }&\xymatrix{
+    \mathcal{C} \ar[rr]^{K}\ar[rd]_{F}&\ar@{=>}[d]_{\eta}  & \mathcal{E}&\\
+    & \mathcal{D} \ar[ru]|{\Lan_{F}K}\ar@/_2pc/[ru]_{G}^{\exists!\Downarrow}& &\\
+    }
+\end{align*}
+Dually, we can also defined \textbf{right Kan extension} $\Ran_{K}F$ of $K$ along with $F$ as following diagrams
+\begin{align*}
+    \xymatrix{
+    \mathcal{C} \ar[rr]^{K}\ar[rd]_{F}&  & \mathcal{E}&\\
+    & \mathcal{D}\ar@{=>}[u]^{\phi} \ar[ru]_{G}& &\\
+    }&\xymatrix{
+    \mathcal{C} \ar[rr]^{K}\ar[rd]_{F}&  & \mathcal{E}&\\
+    & \mathcal{D} \ar@{=>}[u]^{\varepsilon} \ar@/_2pc/[ru]|{\Ran_{F}K}\ar[ru]^{G}_{\exists!\Uparrow}& &\\
+    }
+\end{align*}
+\end{mydefn}
+
+Unfortunately, Kan extension is not always exists in general case though the existence of Kan extension of some functor implies fantastic results.
+\par
+In Quillen's homotopical algebra theory, Kan extension is used to construct derived functors.
+\begin{mydefn}
+Suppose given localizations and functor
+\[
+\xymatrix{
+\mathcal{C}_{1} \ar[r]^{F} \ar[d]^{\gamma_{1}}& \mathcal{C}_{2} \ar[d]^{\gamma_{2}}&\\
+S_{1}^{-1}\mathcal{C}_{1}&S_{2}^{-1}\mathcal{C}_{2}
+}
+\]
+The \textbf{left derived functor} of $F$ is right Kan extension of $\gamma_{2} \circ F$ along with $\gamma_{1}$, denoted by $(\mathbf{L}F, \varepsilon)$, where $\varepsilon$ is the natural transformation in definition.
+\end{mydefn}
+\begin{prop}[\cite{Quil1969}]
+Suppose given localizations and adjoint functors
+\[
+\xymatrix{
+\mathcal{C}_{1} \ar@<1ex>[r]^{F} \ar[d]^{\gamma_{1}}& \mathcal{C}_{2} \ar@<1ex>[l]^{G}_{\bot} \ar[d]^{\gamma_{2}}&\\
+S_{1}^{-1}\mathcal{C}_{1}&S_{2}^{-1}\mathcal{C}_{2}
+}
+\]
+such that
+\begin{enumerate}
+    \item $S_{1}$ contains all isomorphisms of $\mathcal{C}_{1}$. If $f,g$ are maps of $\mathcal{C}_{1}$ such that $gf$ is defined, then if any two of the maps $f$, $g$, $gf$ are in $S_{1}$ so is the third.
+    \item A map $f$ in $\mathcal{C}_{2}$ is in $S_{2}$ if and only if $Gf \in S_{1}$.
+    \item There exists a functor $R:\mathcal{C}_{1} \rightarrow \mathcal{C}_{1}$ and a natural transformation $\xi R \rightarrow \text{id}$ such that for all $X \in \mathbf{Ob}(\mathcal{C}_{1})$ the maps $\xi: RX \rightarrow X$ and $\beta: RX \rightarrow GFRX$ are in $S_{1}$.
+\end{enumerate}
+\par
+Then the left derived functor $\mathbf{L}F$ exists and is quasi-inverse to the functor $\widetilde{G}: S_{2}^{-1}\mathcal{C}_{2} \rightarrow S_{1}^{-1}\mathcal{C}_{1}$ induced by $G$. In particular $\widetilde{G}$ and $\mathbf{L}F$ are equivalences of categories.
+\end{prop}
+
+If $M$ and $N$ are two model categories, we can defined derived functor between them since they have natural localizations to their homotopy categories.
+\begin{cor}
+If $M$ and $N$ are two model categories, then for any pair of Quillen adjunction $(F,G)$, $\mathbf{L}F$ exists.
+\[
+\xymatrix{
+\mathcal{M} \ar@<1ex>[r]^{F} \ar[d]^{\gamma_{1}}& \mathcal{N} \ar@<1ex>[l]^{G}_{\bot} \ar[d]^{\gamma_{2}}&\\
+\mathbf{Ho}\mathcal{M} \ar[r]^{\mathbf{L}F}&\mathbf{Ho}\mathcal{N}
+}
+\]
+\end{cor}

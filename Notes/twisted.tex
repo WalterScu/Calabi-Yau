@@ -1,0 +1,48 @@
+Suppose $C \rightarrow A$ is a linear map from coassociative coalgebra to associative algebra and $\Delta$ is coproduct of $C$, $\mu$ is product of $A$. Following composites of morphisms 
+\[
+C \rightarrow C \otimes C \rightarrow C \otimes A
+\]
+\[
+C \otimes A \rightarrow A \otimes A \rightarrow A
+\]
+both induce a same derivation on $C \otimes A$.
+\[
+d^{r}_{\alpha}: C \otimes A \rightarrow C \otimes C \otimes A \rightarrow C \otimes C \otimes A \rightarrow C \otimes A
+\]
+The construction can be extended to differential graded (co)algebras.
+\[
+d_{\alpha}:= d_{C\otimes A}+d_{\alpha}^{r}
+\]
+where $d_{C\otimes A}$ is the derivation of tensor differential graded (co)algebra.
+\begin{mydefn}
+let $(C, \Delta, \varepsilon)$ be a coalgebra and $(A, \mu, u)$ be an algebra. Suppose $f,g: C \rightarrow A$ is a linear maps. The composte $f * g := \mu \circ (f \otimes g) \circ 
+\Delta$ is called the convolution of f and g.
+\end{mydefn}
+Remark: Let $U: \mathbf{Alg_{k}} \rightarrow \mathbf{Vect_{k}}$ be the forgetful functor sending an algebra to its underlying vector space. The convolution can be viewed as a operation defined on  morphjism set  $\mathbf{Vect_{k}}(U^{op}(C), U(A))$
+\begin{mydefn}
+(Cartan-Maruer equation) $\partial(\alpha)+ \alpha * \alpha = 0$
+\end{mydefn}
+\begin{mydefn}
+(twisting morphism) If $\alpha \in Hom(C,A)$ and $\alpha$ satisfies Cartan-Maruer equation with degree -1, then we say $\alpha$ is a twisting morphism.
+\end{mydefn}
+\begin{mydefn}
+If $\alpha$ is twisting morphism, then $(C \otimes A , d_{\alpha})$ becomes a complex and is denoted by $C\otimes_{\alpha} A$, where $C$ is differential graded coalgebra, A is differential graded algebra. It's called twisted tensor product of $C$ and $A$ with twsiting morphsim $ \alpha$.
+\end{mydefn}
+\begin{prop}
+(properties of derivations)
+\begin{itemize}
+    \item $d_{\alpha * \beta}^{r} =d_{\alpha}^{r} \circ d_{\beta}^{r}$
+    \item $d_{\alpha}^2=d_{\partial(\alpha)+\alpha * \alpha}^{r}$
+\end{itemize}
+\end{prop}
+\begin{proof}
+$d^{r}_{\alpha * \beta} = (id \otimes \mu)(id \otimes \alpha * \beta \otimes id)(\circ \otimes id )=(id \otimes \mu)(id \otimes (\mu(\alpha \otimes \beta) \Delta) \otimes id)(\Delta \otimes id)$
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width= \textwidth]{pic/proof1.png}
+    \caption{draft proof}
+    \label{fig:draft proof}
+\end{figure}
+
+\end{proof}
+By this propsition, it is easy to see that $d_{\alpha}$ is a differential iff $\alpha$ is twisting morphism.

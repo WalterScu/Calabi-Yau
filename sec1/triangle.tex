@@ -1,0 +1,43 @@
+Derived category, a notion in homological algebra, is closely related to abelian category. In homotopical view point, a derived category of a abelian category is the localization of chain complexes category over this abelian category with quasi-isomorphisms.
+\par
+Moreover, we need a notion, a generalization of derived category of an abelian category in classical homological algebra.
+\begin{mydefn}
+An additive category $\mathcal{C}$ is called a triangulated category if it is with following data:
+\begin{enumerate}[(i)]
+    \item An additive auto-equivalence functor $T : \mathcal{C}\rightarrow \mathcal{C}$, the functor is called \textbf{shift functor}. For a object $A$ in $\mathcal{C}$, its $n$-shift (i.e by n times actions of $T$ on $A$) is denoted by $A[n]$ or $s^{n}A$, where $n$ is a integer. 
+    \item A class of \textbf{distinguished triangles}
+    \[
+    A \rightarrow B \rightarrow C \rightarrow A[1]
+    \]
+\end{enumerate}
+They satisfy following axioms
+\begin{enumerate}[TR1]
+    \item $A \xrightarrow{\textbf{id}_{A}} A \rightarrow 0 \rightarrow A[1]$ is distinguished
+    \item any morphism $f: A \rightarrow B$ can be completed to a distinguished triangle;
+    \item a triangle $A \xrightarrow{u} B \xrightarrow{v} C \xrightarrow{w} A[1]$ is distinguished if and only if 
+    \[
+    B \xrightarrow{v} C \xrightarrow{w} A[1] \xrightarrow{-u[1]} B[1]
+    \]
+    is a distinguished triangle;
+    \item Any commutative diagram
+    \[
+    \xymatrix{
+    A \ar[r]^{u} \ar[d]^{f} &B \ar[d]^{g} &\\
+    A' \ar[r]^{u'}& B' &
+    }\]
+    extends to a morphism of triangles(i.e a commutative diagram whose rows are distinguished triangles)
+    \[
+    \xymatrix{
+    A \ar[r]^{u} \ar[d]^{f} & B \ar[r]^{v} \ar[d]^{g} & C \ar[r]^{w} \ar[d]^{h} & A[1] \ar[d]^{f[1]}&\\
+    A' \ar[r]^{u'}& B' \ar[r]^{v'} & C' \ar[r]^{w'} & A'[1]
+    }\]
+    \item Given three distinguished triangles
+    \begin{align*}
+        A \xrightarrow{u} B \xrightarrow{j} C' \xrightarrow{k} A[1]& &B \xrightarrow{v} C \xrightarrow{l} A' \xrightarrow{i} B[1]& &A \xrightarrow{v \circ u} C \rightarrow B' \rightarrow A[1]
+    \end{align*}
+    there exist two morphisms $f: C' \rightarrow B', g: B' \rightarrow A'$ such that$(\textbf{id}_{A},v,f),(u,\textbf{id}_{C},g)$ define morphisms of the triangles and \[
+    \xymatrix{C' \ar[r]^{f} &B' \ar[r]^{g} & A' \ar[r]^{j[1] \circ i}& C'[1]}
+    \]
+    is a distinguished triangle.
+\end{enumerate}
+\end{mydefn}

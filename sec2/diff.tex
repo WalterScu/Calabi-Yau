@@ -1,0 +1,35 @@
+% !TEX root=../main.tex
+\begin{mydefn}
+Let $\phi: R \rightarrow S$ be a ring morphism, in other words, $S$ is a $R$-algebra defined by $\phi$. Let $M$ be a $S$-module. A $R$-derivation into $M$ is a map $D: S \rightarrow M$ which satisfies
+\begin{enumerate}[(i)]
+	\item $D(r_1 s_1 + r_2 s_2)=r_1 D(s_1) + r_2 D(s_2)$
+	\item $D(s_1 s_2) = s_1 D(s_2) + D(s_1) s_2$
+\end{enumerate}
+\end{mydefn}
+Set of $R$-derivation into $M$ is denoted by $\der_{R}(S,M)$. It is also a $S$-module.
+\[
+\der_{R}(S,-): \mathbf{S-Mod} \rightarrow \mathbf{S-Mod}
+\]
+ is a functor and it is corepresentable. $\Omega_{S/R}^1$ is the co-representing object of functor $\der_{R}(S,-)$, i.e for any $S$-module $M$ there exists a isomorphism
+ \[
+ \alpha_{M}: \mathbf{S-Mod}(\Omega_{S/R}^1,M) \rightarrow \der_{R}(S,M)
+ \]
+Let $d= \alpha_{S}^{-1}(\text{id}_{S})$. $(\Omega_{S/R}^1, d)$ is called \textbf{relative differential forms} of $S$ over $R$( also called \textbf{Kahler differential}).
+
+\begin{mydefn}[Modules of differentials]
+Let $X$ be a topological space. Let $\phi: \sheaf_{1} \rightarrow \sheaf_{2}$ be a morphism of sheaves of rings. Let $F$ be a $\sheaf_{2}$-module. A $\sheaf_1$-derivation( $\phi$-derivation) into $F$ is a map $D: \sheaf_2 \rightarrow F$ which is $\sheaf_1$-linear and satisfies Leihbniz rule
+\[
+D(ab)=aD(b)+D(a)b
+\]
+It implies that $D(1)=D(1\cdot 1)=2D(1)$, so $D(1)=0$ and for all $r \in \phi(\sheaf_1)$, $D(r)=0$.
+\par
+Analogously, $\der_{\sheaf_1}(\sheaf_2,-)$ is a representable functor and $\Omega_{\sheaf_1/\sheaf_2}^1$ is the representing object of $\der_{\sheaf_1}(\sheaf_2,-)$. $\Omega_{\sheaf_1/\sheaf_2}^1$ is called \textbf{relative differential forms sheaf} of $\sheaf_1$ over $\sheaf_2$.
+\end{mydefn}
+Actually, in scheme case, the relative differential forms sheaf is compatible as following construction.
+\begin{prop}
+Let $f: X \rightarrow Y$ be a morphism of schemes. Then there exists a unique quasi-coherent sheaf $\Omega_{X/Y}^1$ on $X$ such that for any affine open subset $V$ of $Y$, any affine open subset $U$ of $ f^{-1}(V)$, and any $x \in U$ we have
+\[
+\Omega_{X/Y}^{1}|_{U}= (\Omega^{1}_{\mathcal{O}_{X}(U)/\mathcal{O}_{Y}(V)})^{\sim}
+\]
+\end{prop}
+$\sheaf_{2}[F]$ is sheaflication of presheaf $U \mapsto \sheaf_{2}(U)[F(U)]$ where this denotes the free $\sheaf_{2}$-module on the set $F(U)$. For $s \in F(U)$

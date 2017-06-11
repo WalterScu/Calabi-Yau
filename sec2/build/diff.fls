@@ -1,0 +1,10 @@
+PWD C:/Users/thinkpad/Documents/texmarker/Calabi-Yau categories and Calabi-Yau algebras/sec2
+INPUT d:/TexLive/2017/texmf.cnf
+INPUT d:/TexLive/2017/texmf-dist/web2c/texmf.cnf
+INPUT d:/TexLive/2017/texmf-var/web2c/pdftex/latex.fmt
+INPUT ./diff.tex
+OUTPUT ./build/diff.log
+INPUT d:/TexLive/2017/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT d:/TexLive/2017/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
+INPUT d:/TexLive/2017/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm
+INPUT d:/TexLive/2017/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm

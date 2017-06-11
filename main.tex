@@ -1,0 +1,58 @@
+\documentclass[12pt,twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{times}
+% Twelve point fonts are much easier to read than the standard ten point.
+
+% All the packages and set-up are in the Template.sty file, loaded by the following command.
+\usepackage{Template}
+\usepackage[numbers]{natbib}
+\usepackage{enumerate}
+%load the package of xy-pic
+\usepackage[all,cmtip]{xy}
+%load the package to set format of title
+\usepackage[center]{titlesec}
+%load the package of Diagrams
+\usepackage[nohug,heads=vee]{diagrams}
+\diagramstyle[labelstyle=\scriptstyle]
+% Fairly self-explanatory.  Used by \maketitle.
+
+\title{Calabi-Yau categories and Calabi-Yau algebras}
+\date{\number\year, \semester}
+\author{Haitao,Zou}
+%Set the format of titles
+\titleformat*{\section}{\centering\Large\bfseries}
+\titleformat*{\subsection}{\normalsize\bfseries}
+% Begin the actual text of our document
+\begin{document}
+% The \maketitle command prints title page information at the top of the page.
+\maketitle
+\begin{abstract}
+    It's a short notes for Calabi-Yau algebras and Calabi-Yau categories.
+\end{abstract}
+%
+%\thispagestyle{empty}
+\pagenumbering{roman}
+%\section*{Acknowledgments}
+%Acknowledegments is written here.
+\tableofcontents
+\newpage
+
+\pagenumbering{arabic}
+\section{Introduction}
+	\input{introduction}
+\section{Preliminaries}
+	\input{preliminaries}
+\section{Duality and Serre functor}
+    \input{duality}
+
+\section{Calabi-Yau structures and examples}
+%    \input{applications}
+%\section{Koszul duality theory with homotopy viewpoint}
+%\section{Notes of some sources}
+%    \input{notes}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  The bibliography is here%%
+\bibliographystyle{plain}
+\bibliography{reference}
+\end{document}

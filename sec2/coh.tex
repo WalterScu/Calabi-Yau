@@ -1,0 +1,116 @@
+% !TEX root=../main.tex
+\begin{lemma}
+\label{lem1}
+Suppose $A$ be a commutative ring, $M$ be a $A$-module, then following sequence of $A$-module is exact
+\[
+0 \rightarrow M \xrightarrow{\alpha} \bigoplus_{i=1}^{n} M_{g_i} \xrightarrow{\beta} \bigoplus_{i,j}M_{g_{i}g_{j}}
+\]
+where
+\begin{align*}
+\alpha(m)=(\frac{m}{1},\cdots, \frac{m}{1})& & \beta(\frac{m_1}{g_{1}^{e_1}},\cdots, \frac{m_n}{g_{n}^{e_n}})=(\frac{m_i}{g_{i}^{e_i}}-\frac{m_j}{g_{j}^{e_j}})_{i,j}
+\end{align*}
+\end{lemma}
+\begin{proof}
+Clearly, $\alpha$ is injective as $A$-module morphism and $\beta(\alpha(m))=(\frac{m}{1}-\frac{m}{1})_{i,j}=0$. So what is left to verify is that kernel of $\beta$ is contained in the image of $\alpha$, exactly, if $(\frac{m_i}{g_{i}^{e_i}}-\frac{m_j}{g_{j}^{e_j}})_{i,j}=0$, then all $\frac{m_i}{g_{i}^{e_i}}$ equal to $\frac{m}{1}$ for some $m \in M$.
+\par
+If
+\[
+\frac{m_i}{g_{i}^{e_i}}-\frac{m_j}{g_{j}^{e_j}}=0, \forall i, j =1,\cdots, n
+\]
+then there exist $n_{ij} \in \mathcal{N}$ such that
+\begin{equation}
+\label{eq1}
+(g_{i}g_{j})^{n_{ij}}(g_{j}^{e_j} m_i - g_{i}^{e_i} m_j) =0
+\end{equation}
+Take $N$ be the maximal one of $n_{ij}$, then
+\begin{equation}
+\label{eq2}
+(g_{i}g_{j})^{N}(g_{j}^{e_j} m_i - g_{i}^{e_i} m_j) =0, \forall i,j
+\end{equation}
+which implies that
+\begin{equation}
+\label{eq3}
+g_{i}^{N}g_{j}^{N+e_{j}}m_{i}=g_{j}^{N}g_{i}^{N+e_{i}} m_{j}
+\end{equation}
+But there exist $a_i$ that $1=\sum_{i=1}^{n} a_{i} g_{i}$. Let $M=\max \{ N + e_{i} \}$, then
+\begin{equation}
+\label{eq4}
+1=(\sum_{i=1}^{n}a_{i}g_{i})^{nM}=\sum_{i=1}^{n} \tilde{a_{i}}g_{i}^{M}=\sum_{i=1}^{n}\tilde{a_{i}}\tilde{g_{i}}^{k_i} g_{i}^{N+e_{i}}
+\end{equation}
+Let $b_i = \tilde{a_{i}}\tilde{g}_{i}^{k_i}$. By equations \ref{eq3} and \ref{eq4}, we have
+\[
+\frac{m_i}{g_{i}^{e_i}}=\frac{n_{i}g_{i}^{N}}{g_{i}^{N+e_{i}}}=\sum_{j=1}^{n}\frac{b_{j}g_{j}^{N+e_{j}}m_{i}g_{i}^{N}}{g_{i}^{N+e_{i}}}=\sum_{j=1}^{n} \frac{b_{j}g_{j}^{N}m_{j}}{1}
+\]
+Let $m=\sum_{j=1}^{n}b_{j}g_{j}^{N}m_{j}$, then
+\[
+\frac{m_i}{g_{i}^{e_i}}=\frac{m}{1}, \forall i
+\]
+Hence the given sequence is exact.
+\end{proof}
+\begin{mydefn}
+Suppose $X$ be affine scheme $\spec A$, $M$ be an $A$-module. Then there is a presheaf over module defined openset-wise as
+\[
+\widetilde{M}(U)=\{s: U \rightarrow \coprod_{p \in U} M_{p} | s(p) \in M_{p}, s \text{ locally be} \frac{m}{f}, m \in M, f \in A \}
+\]
+More precisely, $\widetilde{M}$ can be constructed on each standard open as
+\[
+\widetilde{M}(D(f))=M_{f}
+\]
+Such presheaf $\widetilde{M}$ is called \textbf{associated presheaf} to $M$.
+\end{mydefn}
+Remark: Presheaf $\widetilde{M}$ is actually a sheaf. We can check sheaf condition on each standard  open set, which need to verify that following sequence exact
+\[
+0 \rightarrow \widetilde{M}(D(f)) \xrightarrow{\oplus \rho_{f,g_i}} \bigoplus_{i=1}^{n} \widetilde{M}(D(g_i)) \xrightarrow{\oplus_{i,j} \rho_{g_i,g_{i}g_{j}}-\rho_{g_{j},g_{i}g_{j}}} \bigoplus_{i,j}\widetilde{M}(D(g_i) \cap D_(g_j))
+\]
+This sequence is equal to
+\[
+0 \rightarrow M_f \xrightarrow{\alpha} \bigoplus_{i=1}^{n} M_{fg_i} \xrightarrow{\beta} \bigoplus_{i,j}M_{fg_{i}g_{j}}
+\]
+where $\alpha$ and $\beta$ are defined as in lemma \ref{lem1}. The result is clear from lemma \ref{lem1} by changing $M$ into $M_f$.
+
+\begin{mydefn}
+Let $X=\spec A$. The associated sheaf to $A$(as $A$-module) $\widetilde{A}$ is called \textbf{structure sheaf} of $X$ and denoted by $\mathcal{O}_{X}$. More generally, for any scheme $X$ that is covered by affine open sets $\spec A_{i}$, sheaf of $X$ assigning each open set $\spec A_{i}$ associated sheaf to $A_i$ is also called structure sheaf of $X$.
+\end{mydefn}
+
+\begin{prop}
+Let $X=\spec A$, $A$ be a commutative ring
+\begin{enumerate}[(i)]
+	\item
+	\[
+	(-)^{\sim}: A-\mathbf{Mod} \rightarrow \mathbf{Sh(X)}
+	\]
+	is fully-faithful functor from $A$-modules category to sheaves category of affine scheme $X$.
+	\item $\widetilde{(M\otimes_{A}N)} \simeq \widetilde{M} \otimes_{\mathcal{O}_{X}} \widetilde{N}$, where the right tensor is tensor of sheaves over modules.
+	\item $\widetilde{(\oplus M_{i})} \simeq \oplus \widetilde{M_{i}}$, where the right direct sum if direct sum of sheaves over modules.
+\end{enumerate}
+\end{prop}
+
+\begin{mydefn}[Hartshorne, Algebraic Geomtry]
+\label{cohdef1}
+Let $(X, \mathcal{O}_{X})$ be a ringed space. A sheaf of $\mathcal{O}_{X}$-modules $F$ is \textbf{quasi-coherent} if $X$ can covered by open affine subsets $U_{i} = \spec A_{i}$ such that for each $i$ there is an $A_i$-module $M_i$ with $F|_{U_i} \simeq \widetilde{M_i}$. We say that is \textbf{coherent} if furthermore each $M_i$ can be taken to be a finitely generated $A_i$-module.
+\end{mydefn}
+It is easy to see that definition \ref{cohdef1} is about scheme. More generally, we can also define quasi-coherent sheaf and coherent sheaf on a arbitrary ringed space.
+\begin{mydefn}[Stack Project]
+\label{cohdef2}
+Let $(X, \mathcal{O}_{X})$ be a ringed space. Let $F$ be a sheaf of $\mathcal{O}_X$-modules. We say that $F$ is \textbf{quasi-coherent} sheaf of $\mathcal{O}_X$-modules if for every point $x\in X$ there exists an open neighbourhood $x \in U \subset X$ such that $F|_{U}$ is isomorphic to the cokernel of map
+\[
+\bigoplus_{j \in J} \mathcal{O}_{U} \rightarrow \bigoplus_{i \in I} \mathcal{O}_{U}
+\]
+This means that $X$ is covered by open sets $U$ such that $F|_{U}$ has a presentation of form
+\[
+\bigoplus_{j \in J} \mathcal{O}_U \rightarrow \bigoplus_{i \in I} \mathcal{O}_U \rightarrow F|_U \rightarrow 0
+\]
+If quasi-coherent sheaf $F$ satisfies following conditions:
+\begin{enumerate}[(i)]
+    \item $F$ is of finite type
+    \item for every open set  $U \subset X$ and every finite collection $s_i \in F(U)$, the kernel of associated map $\bigoplus_{i} \mathcal{O}_X \rightarrow F|_U$ is of finite type
+\end{enumerate}
+then $F$ is called \textbf{coherent} sheaf.
+\end{mydefn}
+\begin{ex}
+On any scheme $X$, the structure sheaf $\mathcal{O}_X$ is quasi-coherent and coherent.
+\end{ex}
+
+\begin{mydefn}
+Let $B$ be a graded ring and let $X= \proj B$. For any $n \in \mathbb{Z}$, we define that sheaf $\mathcal{O}_X(n)$ to be $\widetilde{S(n)}$. We call $\mathcal{O}_{X}(1)$ the twisting sheaf of Serre(or very ample sheaf). For any sheaf of $\mathcal{O}_X$-module, $F$, we denote by $F(n)$ the twisted $F \otimes_{\mathcal{O}_X} \mathcal{O}_{X}(n)$.
+\end{mydefn}

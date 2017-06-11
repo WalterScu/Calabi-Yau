@@ -32,4 +32,16 @@ Let $f: X \rightarrow Y$ be a morphism of schemes. Then there exists a unique qu
 \Omega_{X/Y}^{1}|_{U}= (\Omega^{1}_{\mathcal{O}_{X}(U)/\mathcal{O}_{Y}(V)})^{\sim}
 \]
 \end{prop}
-$\sheaf_{2}[F]$ is sheaflication of presheaf $U \mapsto \sheaf_{2}(U)[F(U)]$ where this denotes the free $\sheaf_{2}$-module on the set $F(U)$. For $s \in F(U)$
+$\sheaf_{2}[F]$ is sheaflication of presheaf $U \mapsto \sheaf_{2}(U)[F(U)]$ where this denotes the free $\sheaf_{2}$-module on the set $F(U)$. For $s \in F(U)$, $[s]$ is the corresponding section of $\sheaf_{2}[F]$ over $U$. If $F$ is a sheaf of $\sheaf_2$-module, then there is a canonical map
+\[
+c: \sheaf_2 [F] \rightarrow F
+\]
+which on the presheaf level is given by rule $\sum f_{s}[S] \mapsto \sum f_{s}s$.
+\par
+Let $\Omega_{\sheaf_{2}/\sheaf_{1}}^{1}$ be cokernel of following map.
+\begin{align*}
+	M= \sheaf_{2}[\sheaf_{2} \times \sheaf_{2}] \bigoplus \sheaf_{2}[\sheaf_{2} \times \sheaf_{2}] \bigoplus \sheaf_{2}[\sheaf_{1}] \rightarrow& \sheaf_{2}[\sheaf_{2}]\\
+	[(a,b)] \oplus [(f,g)] \oplus [h] \mapsto& [a+b] - [a]-[b]\\
+	&+[fg]-[f]g-f[g]) \\
+	&+[\phi(h)]
+\end{align*}

@@ -1,0 +1,24 @@
+In this subsection, we will give an introduction about Serre-Grothendieck duality and more general notion about Serre functor. This is main part of the section that help us make clear how can we define a Calabi-Yau structure in some category and how to define Calabi-Yau algebras in more general setting.
+Firstly, we give a definition about duality in a monoidal category. In the setting of basic linear algebra, we has notion of linear dual vector space for a given vector, which consists of all linear forms on it. Suppose $V$ be a vector space over $k$, its linear dual is of form like 
+\[
+V^* = \hom(V,k)
+\]
+More generally, we can also define 'duality structure' in a monoidal as mentioned in the beginning.
+\begin{mydefn}
+Let $\mathcal{C}$ be a monoidal category. A \textbf{duality datumn} in $\mathcal{C}$ consists of the following data:
+\begin{enumerate}[(i)]
+	\item A pair of objects $(X, X^{\vee}) \in \mathcal{C}$
+	\item A pair of morphisms 
+	\begin{align*}
+	c: 1 \rightarrow X \otimes X^{\vee}& & e: X^{\vee} \otimes X \rightarrow 1
+	\end{align*}
+	where 1 denotes the unit object of $\mathcal{C}$.
+\end{enumerate}
+These morphisms are required to satisfy the following condition:
+The compositions of these morphisms 
+\begin{align*}
+&X \xlongrightarrow{c \otimes id} X \otimes X^{\vee} \otimes X \xlongrightarrow{id \otimes e} X\\
+&X^{\vee} \xlongrightarrow{id \otimes c} X^{\vee} \otimes X \otimes X^{\vee} \xlongrightarrow{e \otimes id} X^{\vee}
+\end{align*}
+are the identity on $X$ and $X^{\vee}$, respectively.
+\end{mydefn}

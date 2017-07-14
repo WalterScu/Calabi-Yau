@@ -1,0 +1,27 @@
+% !TEX root=../main.tex
+Given an equivalence of $k$-linear(enriched triangulated) categories $S: \mathcal{C} \rightarrow \mathcal{C}$, it is called a Serre functor if there is an isomorphism of bifucntors from $ \mathcal{C}^{\text{op}} \times \mathcal{C} \rightarrow \mathbf{Ab}$.
+\[
+\mathcal{C}(?,?) \simeq \mathcal{C}(?,S(?))^{*} \circ \tau
+\]
+where $\tau: \mathcal{C}^{\text{op}} \times \mathcal{C} \rightarrow \mathcal{C}^{\text{op}} \times \mathcal{C}$ is the bifunctor  exchanging two components. In particular, for any two objects $A,B$ in $\mathcal{C}$,
+\[
+\mathcal{C}(A,B) \simeq \mathcal{C}(B,S(A))^{*}
+\]
+
+\begin{prop}
+If there is a Serre functor on a $k$-linear category, it is unique up to natural isomorphism.
+\end{prop}
+\begin{proof}
+Suppose $S_1$ and $S_2$ both be Serre functors on category $\mathcal{C}$. Let $A$ be any object of $\mathcal{C}$. then we have following isomorphisms by definition
+\[
+\mathcal{C}(A,A) \simeq \mathcal{C}(A, S_1(A))^{*} \simeq \mathcal{C}(S_1(A),S_2(A))
+\]
+Thus, the image of identity morphism $\text{id}_A$ in $\mathcal{C}(S_1(A),S_2(A))$ is an isomorphism between $S_1(A)$ and $S_2(A)$, so it can be extended to a natural isomorphism between $S_1$ and $S_2$.
+\end{proof}
+
+\begin{prop}
+A Serre functor of triangulated categories is automatically a $\delta $-functor.
+\end{prop}
+\begin{proof}
+TBA
+\end{proof}

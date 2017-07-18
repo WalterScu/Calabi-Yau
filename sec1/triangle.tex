@@ -41,3 +41,37 @@ They satisfy following axioms
     is a distinguished triangle.
 \end{enumerate}
 \end{mydefn}
+
+\begin{mydefn}
+A commutative square
+\[
+\xymatrix{
+X \ar[r]^{\alpha'} \ar[d]_{\alpha''} &Y' \ar[d]^{\beta'}&\\
+Y'' \ar[r]^{\beta''} & Z &
+}
+\]
+is called homotopy cartesian square if there exists an distinguished triangle
+\[
+\xymatrix{
+X \ar[r] &Y' \coprod Y'' \ar[r]& Z \ar[r]^{\gamma} & X[1]
+}
+\]
+$\gamma$ is called a differential of homotopy cartesian square.
+\end{mydefn}
+
+\begin{prop}
+Diagram 
+\[
+\xymatrix{
+X \ar[r]^{\alpha'} \ar[d]_{\alpha''} &Y' \ar[d]^{\beta'}&\\
+Y'' \ar[r]^{\beta''} & Z &
+}
+\]
+is pull-back iff 
+\[
+\xymatrix{
+0 \ar[r] & X \ar[r] & Y' \coprod Y'' \ar[r] & Z \ar[r] & 0&
+}
+\]
+is a distinguished triangle.
+\end{prop}

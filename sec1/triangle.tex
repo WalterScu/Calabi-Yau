@@ -1,3 +1,4 @@
+% !TEX root=../main.tex
 Derived category, a notion in homological algebra, is closely related to abelian category. In homotopical view point, a derived category of a abelian category is the localization of chain complexes category over this abelian category with quasi-isomorphisms.
 \par
 Moreover, we need a notion, a generalization of derived category of an abelian category in classical homological algebra.
@@ -5,7 +6,7 @@ Moreover, we need a notion, a generalization of derived category of an abelian c
 An additive category $\mathcal{C}$ is called a triangulated category if it is with following data:
 \begin{enumerate}[(i)]
     \item An additive auto-equivalence functor $T : \mathcal{C}\rightarrow \mathcal{C}$, the functor is called \textbf{shift functor}. For a object $A$ in $\mathcal{C}$, its $n$-shift (i.e by n times actions of $T$ on $A$) is denoted by $A[n]$ or $s^{n}A$, where $n$ is a integer. 
-    \item A class of \textbf{distinguished triangles}
+    \item A class of \textbf{distinguished triangles}(also called \textbf{exact triangles})
     \[
     A \rightarrow B \rightarrow C \rightarrow A[1]
     \]
@@ -52,9 +53,9 @@ Y'' \ar[r]^{\beta''} & Z &
 \]
 is called homotopy cartesian square if there exists an distinguished triangle
 \[
-\xymatrix{
-X \ar[r] &Y' \coprod Y'' \ar[r]& Z \ar[r]^{\gamma} & X[1]
-}
+X \xlongrightarrow{\bigl(\begin{smallmatrix} \alpha'\\ 
+\alpha'' 
+\end{smallmatrix}\bigr)} Y' \coprod Y'' \xlongrightarrow{\bigl( \begin{smallmatrix} \beta' & -\beta'' \end{smallmatrix} \bigr) }  Z \xlongrightarrow{\gamma} X[1]
 \]
 $\gamma$ is called a differential of homotopy cartesian square.
 \end{mydefn}
@@ -69,9 +70,13 @@ Y'' \ar[r]^{\beta''} & Z &
 \]
 is pull-back iff 
 \[
-\xymatrix{
-0 \ar[r] & X \ar[r] & Y' \coprod Y'' \ar[r] & Z \ar[r] & 0&
-}
+0 \rightarrow X \xlongrightarrow{\bigl(\begin{smallmatrix} \alpha'\\ 
+\alpha'' 
+\end{smallmatrix}\bigr)} Y' \coprod Y'' \xlongrightarrow{\bigl( \begin{smallmatrix} \beta' & -\beta'' \end{smallmatrix} \bigr)} Z \rightarrow 0
 \]
 is a distinguished triangle.
 \end{prop}
+
+\begin{mydefn}
+A subcategory of a triangulated category is called \textbf{triangulated subcategory} if each its morphism $A \rightarrow B$ can be extended to a distinguished triangle with morphisms in the subcategory.
+\end{mydefn}

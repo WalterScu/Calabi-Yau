@@ -1,6 +1,35 @@
+% !TEX root=../main.tex
 Enriched category theory deals with categories whose morphism sets have additional structures. Always, the structure on the morphism sets makes original category taking more information.
 \begin{mydefn}
-Suppose $\mathcal{C}$ be a category and $\mathcal{S}$ is a concrete category with forgetful functor $U$.  $\mathcal{C}$ is called a enriched category over $S$ if $\mathcal{C}(X,Y)$ is a object in $S$ for all $X,Y$ in $\mathcal{C}$.
+Suppose $\mathcal{E}$ be a category and $\mathcal{S}$ be a monoidal category. $\mathcal{E}$ is called a enriched category over $S$ if $\mathcal{C}(X,Y)$ is a object in $S$ for all $X,Y$ in $\mathcal{C}$ with following two families of morphisms
+\[
+\xymatrix{
+\circ_{(X,Y,Z)}: \mathcal{E}(Y,Z) \otimes \mathcal{E}(X,Y) \ar[r] & \mathcal{E}(X,Z)& & \forall X,Y,Z \in \textbf{Ob}(\mathcal{E})
+}
+\]
+%
+\[
+\xymatrix{
+u_X : 1 \ar[r] &\mathcal{E}(X,X)& & \forall X \in \textbf{Ob}(\mathcal{E})
+}
+\]
+These morphisms satisfy following properties
+%associative
+\[
+\xymatrix{
+(\mathcal{E}(C,D) \otimes \mathcal{E}(B,C))\otimes \mathcal{E}(A,B) \ar[rr]^-{\simeq} \ar[d]_{\circ_{(B,C,D)} \otimes id}& &\mathcal{E}(C,D) \otimes (\mathcal{E}(B,C)\otimes \mathcal{E}(A,B)) \ar[d]^{id \otimes \circ_{(A,B,C)}}&\\ 
+\mathcal{E}(B,D) \otimes \mathcal{E}(A,B) \ar[rd]^{\circ_{(A,B,D)}}& &\mathcal{E}(C,D) \otimes \mathcal{E}(A,C) \ar[ld]^{\circ_{(A,C,D)}}&\\
+ &\mathcal{E}(A,D)& &
+}
+\]
+%unit
+\[
+\xymatrix{
+& &\mathcal{E}(X,Y) \otimes 1 \ar[d]^{\simeq} \ar[rd]^{u_X}& &\\
+& \mathcal{E}(Y,Y) \otimes \mathcal{E}(X,Y) \ar[r]^-{\circ_{(X,Y,Y)}} &\mathcal{E}(X,Y)& \mathcal{E}(X,Y) \otimes \mathcal{E}(X,X) \ar[l]_-{\circ_{(X,X,Y)}}&\\
+& &1 \otimes \mathcal{E}(X,Y) \ar[lu]^{u_Y} \ar[u]^{\simeq}& &
+}
+\]
 \end{mydefn}
 \begin{ex}
 $(\infty, k)$-categories can be defined as $\infty$-categories enriched over $(\infty, k-1)$-categories by induction.

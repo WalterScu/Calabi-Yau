@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1500643910 "main.aux" "main.bbl" "main" 1500645499
+["bibtex main"] 1501160083 "main.aux" "main.bbl" "main" 1501160922
   "d:/texlive/2017/texmf-dist/bibtex/bst/base/plain.bst" 1499163986 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "main.aux" 1500645498 2818 0e2eddb5a81845f481ae99f7dccd7193 ""
+  "main.aux" 1501160921 2818 0e2eddb5a81845f481ae99f7dccd7193 ""
   "reference.bib" 1499613715 7175 2542947e0972bec0f6633161ffb63a67 ""
   (generated)
-  "main.bbl"
   "main.blg"
-["pdflatex"] 1500645496 "main.tex" "main.pdf" "main" 1500645499
+  "main.bbl"
+["pdflatex"] 1501160920 "main.tex" "main.pdf" "main" 1501160922
   "Template.sty" 1499613715 6283 54bd82d2fcdddd1de03b5fbe1fdf5552 ""
   "d:/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc" 1499164243 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "d:/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1499164427 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
@@ -237,11 +237,11 @@
   "d:/texlive/2017/texmf.cnf" 1499165713 673 4ae7b2f49cee444c5343a45b5d0f169c ""
   "duality.tex" 1500208763 418 057aa382dad83b436867e02a1866cdda ""
   "introduction.tex" 1499613715 4 ff91de1ceee4db0ebf164e2e1e3e29d7 ""
-  "main.aux" 1500645498 2818 0e2eddb5a81845f481ae99f7dccd7193 ""
-  "main.bbl" 1500643911 544 f6e7ebb828269e03154b0c6cfbda619c "bibtex main"
-  "main.out" 1500645498 889 b60a9982fb0b371919bdb739171ae45c ""
+  "main.aux" 1501160921 2818 0e2eddb5a81845f481ae99f7dccd7193 ""
+  "main.bbl" 1501160083 544 f6e7ebb828269e03154b0c6cfbda619c "bibtex main"
+  "main.out" 1501160921 889 b60a9982fb0b371919bdb739171ae45c ""
   "main.tex" 1500436269 1725 467021245bca366939af72a6e35ab191 ""
-  "main.toc" 1500645498 1094 1e324645b307afe1a4c058beaf7ae9a0 ""
+  "main.toc" 1501160921 1094 1e324645b307afe1a4c058beaf7ae9a0 ""
   "preliminaries.tex" 1499613715 238 9eb367028c0c2616e7e919e54461ecb1 ""
   "sec1/Kan.tex" 1499614361 3998 81176f0766891898b588158416b2a617 ""
   "sec1/enrich.tex" 1500436704 2027 898aec5855ceb34bab7d91c7f2a64684 ""
@@ -250,10 +250,10 @@
   "sec2/coh.tex" 1499613715 6443 9e5763847b22d2f866e1a5c50cb3d5f6 ""
   "sec2/diff.tex" 1499613715 3292 db9dabaca1dbbadc6daacef463992470 ""
   "sec2/sduality.tex" 1500208763 1580 2c84150fa9218fdc5b0fb8bd356b16cb ""
-  "sec2/sfunctor.tex" 1500645495 1856 3e2e90c186f6a0cb09d3a2a7333ed7a7 ""
+  "sec2/sfunctor.tex" 1501160919 2220 55042d0c095632af1abc8cd6c1f1a492 ""
   (generated)
-  "main.out"
-  "main.toc"
   "main.log"
+  "main.toc"
   "main.aux"
+  "main.out"
   "main.pdf"

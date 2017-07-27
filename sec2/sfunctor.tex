@@ -1,22 +1,22 @@
 % !TEX root=../main.tex
 Given an equivalence of $k$-linear(enriched triangulated) categories $S: \mathcal{C} \rightarrow \mathcal{C}$, it is called a Serre functor if there is an isomorphism of bifucntors from $ \mathcal{C}^{\text{op}} \times \mathcal{C} \rightarrow \mathbf{Ab}$.
 \[
-\mathcal{C}(?,?) \simeq \mathcal{C}(?,S(?))^{*} \circ \tau
+\mathcal{C}(?,?) \simeq \mathcal{T}(?,S(?))^{\vee} \circ \tau
 \]
-where $\tau: \mathcal{C}^{\text{op}} \times \mathcal{C} \rightarrow \mathcal{C}^{\text{op}} \times \mathcal{C}$ is the bifunctor  exchanging two components. In particular, for any two objects $A,B$ in $\mathcal{C}$,
+where $\tau: \mathcal{T}^{\text{op}} \times \mathcal{T} \rightarrow \mathcal{T}^{\text{op}} \times \mathcal{T}$ is the bifunctor  exchanging two components. In particular, for any two objects $A,B$ in $\mathcal{T}$,
 \[
-\mathcal{C}(A,B) \simeq \mathcal{C}(B,S(A))^{*}
+\mathcal{T}(A,B) \simeq \mathcal{T}(B,S(A))^{\vee}
 \]
 
 \begin{prop}
 If there is a Serre functor on a $k$-linear category, it is unique up to natural isomorphism.
 \end{prop}
 \begin{proof}
-Suppose $S_1$ and $S_2$ both be Serre functors on category $\mathcal{C}$. Let $A$ be any object of $\mathcal{C}$. then we have following isomorphisms by definition
+Suppose $S_1$ and $S_2$ both be Serre functors on category $\mathcal{T}$. Let $A$ be any object of $\mathcal{T}$. then we have following isomorphisms by definition
 \[
-\mathcal{C}(A,A) \simeq \mathcal{C}(A, S_1(A))^{*} \simeq \mathcal{C}(S_1(A),S_2(A))
+\mathcal{T}(A,A) \simeq \mathcal{T}(A, S_1(A))^{\vee} \simeq \mathcal{T}(S_1(A),S_2(A))
 \]
-Thus, the image of identity morphism $\text{id}_A$ in $\mathcal{C}(S_1(A),S_2(A))$ is an isomorphism between $S_1(A)$ and $S_2(A)$, so it can be extended to a natural isomorphism between $S_1$ and $S_2$.
+Thus, the image of identity morphism $\text{id}_A$ in $\mathcal{T}(S_1(A),S_2(A))$ is an isomorphism between $S_1(A)$ and $S_2(A)$, so it can be extended to a natural isomorphism between $S_1$ and $S_2$.
 \end{proof}
 
 \begin{prop}
@@ -25,6 +25,14 @@ A Serre functor of triangulated categories is automatically a $\delta $-functor.
 \begin{proof}
 TBA
 \end{proof}
+
+\begin{prop}
+Suppose $\mathcal{T}_1,\mathcal{T}_2$ be two triangulated categories with Serre functors $S_1,S_2$ individually. If $ \phi : \mathcal{T}_1 \rightarrow \mathcal{T}_2$ be a functor, then left adjoint functor $\phi^{*}$ exists if and only if right adjoint functor$\phi^{!}$ exists and 
+\[
+S_1 \circ \phi^{!} = \phi^{*} \circ S_2
+\]
+\end{prop}
+
 \begin{mydefn}[Calabi-Yau category]
 Suppose $\mathcal{A}$ be a triangulated category(enriched on category of finitely dimensional vector spaces) with Serre functor $S$. $\mathcal{A}$ is called \textbf{n-Calabi-Yau category} if Serre functor $S$ is natural equivalent to shifted identity functor $\text{id}_{\mathcal{A}}[n]$ of $\mathcal{A}$, that is ,there is 
 \[
